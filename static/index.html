@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,13 @@
     <!-- Google Fonts for modern typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <!-- Boxicons for icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body class="dark-theme"> <!-- Default dark theme -->
 
     <!-- Navigation Bar -->
@@ -20,10 +24,13 @@
             <div class="logo" onclick="navigateTo('landing')">
                 <i class='bx bx-brain'></i> W.I.K.T.O.R
             </div>
-            
+
             <div class="nav-links" id="navLinks">
-                <button class="nav-btn" onclick="navigateTo('chat')">Try Chatbot</button>
-                <button class="nav-btn login-btn" onclick="navigateTo('login')">Login</button>
+                <button class="nav-btn" onclick="navigateTo('landing')"><i class='bx bx-home-alt'></i> Home</button>
+                <button class="nav-btn" onclick="navigateTo('chat')"><i class='bx bx-message-rounded-dots'></i> Try
+                    Chatbot</button>
+                <button class="nav-btn login-btn" onclick="navigateTo('login')"><i class='bx bx-log-in'></i>
+                    Login</button>
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
                     <i class='bx bx-sun'></i>
                 </button>
@@ -37,15 +44,17 @@
 
     <!-- Main Content Area (SPA sections) -->
     <main class="main-content">
-        
+
         <!-- === Landing Page Section === -->
         <section id="landing" class="page-section active">
             <div class="hero">
                 <div class="hero-content">
                     <h1 class="gradient-text">Unlock Human Knowledge</h1>
-                    <p class="subtitle">W.I.K.T.O.R is an advanced AI agent powered by Wikipedia. Ask nuanced questions and get precise, grounded answers.</p>
+                    <p class="subtitle">W.I.K.T.O.R is an advanced AI agent powered by Wikipedia. Ask nuanced questions
+                        and get precise, grounded answers.</p>
                     <div class="hero-buttons">
-                        <button class="primary-btn" onclick="navigateTo('chat')">Start Researching <i class='bx bx-right-arrow-alt'></i></button>
+                        <button class="primary-btn" onclick="navigateTo('chat')">Start Researching <i
+                                class='bx bx-right-arrow-alt'></i></button>
                         <button class="secondary-btn" onclick="navigateTo('login')">Create Account</button>
                     </div>
                 </div>
@@ -66,7 +75,8 @@
                 <aside class="chat-sidebar" id="chatSidebar">
                     <div class="sidebar-header">
                         <h3>Chat History</h3>
-                        <button class="icon-btn" id="clearHistoryBtn" title="Clear History"><i class='bx bx-trash'></i></button>
+                        <button class="icon-btn" id="clearHistoryBtn" title="Clear History"><i
+                                class='bx bx-trash'></i></button>
                     </div>
                     <ul class="history-list" id="historyList">
                         <!-- History items populated by JS -->
@@ -76,14 +86,16 @@
                 <!-- Main Chat Area -->
                 <div class="chat-container glass-panel">
                     <div class="chat-header">
-                        <button class="icon-btn mobile-sidebar-toggle" id="mobileSidebarToggle"><i class='bx bx-sidebar'></i></button>
+                        <button class="icon-btn mobile-sidebar-toggle" id="mobileSidebarToggle"><i
+                                class='bx bx-sidebar'></i></button>
                         <h2>Research Assistant</h2>
                     </div>
-                    
+
                     <div class="chat-messages" id="chatMessages">
                         <div class="message system-msg">
                             <div class="msg-avatar"><i class='bx bx-bot'></i></div>
-                            <div class="msg-content">Hello! I am W.I.K.T.O.R. Please provide a Wikipedia topic and ask your question.</div>
+                            <div class="msg-content">Hello! I am W.I.K.T.O.R. Please provide a Wikipedia topic and ask
+                                your question.</div>
                         </div>
                     </div>
 
@@ -91,7 +103,8 @@
                         <form id="chatForm">
                             <div class="input-group">
                                 <i class='bx bx-search'></i>
-                                <input type="text" id="topicInput" placeholder="Wikipedia Topic (e.g., Quantum Mechanics)" required>
+                                <input type="text" id="topicInput"
+                                    placeholder="Wikipedia Topic (e.g., Quantum Mechanics)" required>
                             </div>
                             <div class="input-group message-input-group">
                                 <input type="text" id="questionInput" placeholder="Ask your question..." required>
@@ -129,7 +142,8 @@
                         <button class="social-btn"><i class='bx bxl-google'></i> Google</button>
                         <button class="social-btn"><i class='bx bxl-github'></i> Github</button>
                     </div>
-                    <p class="auth-footer">Don't have an account? <a href="#" onclick="alert('Sign up flow not implemented yet!')">Sign up</a></p>
+                    <p class="auth-footer">Don't have an account? <a href="#"
+                            onclick="alert('Sign up flow not implemented yet!')">Sign up</a></p>
                 </div>
             </div>
         </section>
@@ -138,4 +152,5 @@
 
     <script src="/static/js/app.js"></script>
 </body>
+
 </html>
